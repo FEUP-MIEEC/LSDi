@@ -1,0 +1,6 @@
+CommandLine
+C:\Xilinx\10.1\ISE\bin\nt64\unwrapped\xst.exe -ise F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise -intstyle ise -ifn F:/LSDI/1MIEEC01/good/LSDI2015_lab2/s3board_toplevel.xst -ofn F:/LSDI/1MIEEC01/good/LSDI2015_lab2/s3board_toplevel.syr -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

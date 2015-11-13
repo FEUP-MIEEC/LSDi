@@ -1,0 +1,44 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : sch2verilog
+//  /   /         Filename : fulladder.vf
+// /___/   /\     Timestamp : 11/12/2015 16:22:20
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\10.1\ISE\bin\nt64\unwrapped\sch2verilog.exe -intstyle ise -family spartan3 -w F:/LSDI/1MIEEC01/good/LSDI2015_lab2/fulladder.sch fulladder.vf
+//Design Name: fulladder
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module fulladder(A, 
+                 B, 
+                 Ci, 
+                 Co, 
+                 S);
+
+    input A;
+    input B;
+    input Ci;
+   output Co;
+   output S;
+   
+   
+   carryout XLXI_1 (.A(A), 
+                    .B(B), 
+                    .Ci(Ci), 
+                    .Co(Co));
+   sum XLXI_3 (.A(A), 
+               .B(B), 
+               .Ci(Ci), 
+               .S(S));
+endmodule

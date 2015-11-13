@@ -1,0 +1,77 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : sch2verilog
+//  /   /         Filename : adder4b.vf
+// /___/   /\     Timestamp : 11/12/2015 16:22:18
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\10.1\ISE\bin\nt64\unwrapped\sch2verilog.exe -intstyle ise -family spartan3 -w F:/LSDI/1MIEEC01/good/LSDI2015_lab2/adder4b.sch adder4b.vf
+//Design Name: adder4b
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module adder4b(A0, 
+               A1, 
+               A2, 
+               A3, 
+               B0, 
+               B1, 
+               B2, 
+               B3, 
+               Ci, 
+               Co, 
+               S0, 
+               S1, 
+               S2, 
+               S3);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+    input Ci;
+   output Co;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   
+   fulladder XLXI_1 (.A(A0), 
+                     .B(B0), 
+                     .Ci(Ci), 
+                     .Co(XLXN_10), 
+                     .S(S0));
+   fulladder XLXI_5 (.A(A1), 
+                     .B(B1), 
+                     .Ci(XLXN_10), 
+                     .Co(XLXN_11), 
+                     .S(S1));
+   fulladder XLXI_6 (.A(A3), 
+                     .B(B3), 
+                     .Ci(XLXN_12), 
+                     .Co(Co), 
+                     .S(S3));
+   fulladder XLXI_7 (.A(A2), 
+                     .B(B2), 
+                     .Ci(XLXN_11), 
+                     .Co(XLXN_12), 
+                     .S(S2));
+endmodule

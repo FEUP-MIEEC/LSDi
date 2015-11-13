@@ -1,0 +1,24 @@
+CommandLine-Map
+
+s
+CommandLine-Ngdbuild
+C:\Xilinx\10.1\ISE\bin\nt64\unwrapped\ngdbuild.exe -ise F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-5 s3board_toplevel.ngc s3board_toplevel.ngd
+s
+CommandLine-Par
+
+s
+CommandLine-Xst
+
+s
+Previous-NGD
+s3board_toplevel_prev_built.ngd
+s
+Previous-NGM
+
+s
+Previous-Packed-NCD
+
+s
+Previous-Routed-NCD
+
+s

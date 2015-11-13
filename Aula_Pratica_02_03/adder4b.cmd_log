@@ -1,0 +1,4 @@
+sch2verilog -intstyle ise -family spartan3   -w "C:/Users/xilinx/Desktop/LSDI2015_lab2/adder4b.sch" adder4b.vf
+sch2verilog -intstyle ise -family spartan3   -w "C:/Users/xilinx/Desktop/LSDI2015_lab2/adder4b.sch" adder4b.vf
+sch2verilog -intstyle ise -family spartan3   -w "C:/Users/xilinx/Desktop/LSDI2015_lab2/adder4b.sch" adder4b.vf
+sch2verilog -intstyle ise -family spartan3   -w "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/adder4b.sch" adder4b.vf

@@ -1,0 +1,169 @@
+Release 10.1 par K.31 (nt64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+I00CN0703::  Thu Nov 12 17:42:34 2015
+
+par -w -intstyle ise -ol std -t 1 s3board_toplevel_map.ncd s3board_toplevel.ncd
+s3board_toplevel.pcf 
+
+
+Constraints file: s3board_toplevel.pcf.
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx\10.1\ISE.
+   "s3board_toplevel" is an NCD, version 3.2, device xc3s200, package ft256, speed -5
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.39 2008-01-09".
+
+
+Device Utilization Summary:
+
+   Number of BUFGMUXs                        1 out of 8      12%
+   Number of External IOBs                  33 out of 173    19%
+      Number of LOCed IOBs                  33 out of 33    100%
+
+   Number of Slices                         39 out of 1920    2%
+      Number of SLICEMs                      0 out of 960     0%
+
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+Starting initial Timing Analysis.  REAL time: 0 secs 
+Finished initial Timing Analysis.  REAL time: 0 secs 
+
+WARNING:Par:288 - The signal btn1_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal btn2_IBUF has no load.  PAR will not attempt to route this signal.
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:9897ba) REAL time: 0 secs 
+
+Phase 2.7
+Phase 2.7 (Checksum:1312cfe) REAL time: 0 secs 
+
+Phase 3.31
+Phase 3.31 (Checksum:1c9c37d) REAL time: 0 secs 
+
+Phase 4.2
+
+.
+Phase 4.2 (Checksum:26259fc) REAL time: 0 secs 
+
+Phase 5.8
+.
+.
+Phase 5.8 (Checksum:99155a) REAL time: 1 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 1 secs 
+
+Phase 7.18
+Phase 7.18 (Checksum:42c1d79) REAL time: 1 secs 
+
+Phase 8.5
+Phase 8.5 (Checksum:4c4b3f8) REAL time: 1 secs 
+
+REAL time consumed by placer: 1 secs 
+CPU  time consumed by placer: 1 secs 
+Writing design to file s3board_toplevel.ncd
+
+
+Total REAL time to Placer completion: 1 secs 
+Total CPU time to Placer completion: 1 secs 
+
+Starting Router
+
+Phase 1: 241 unrouted;       REAL time: 1 secs 
+
+Phase 2: 228 unrouted;       REAL time: 1 secs 
+
+Phase 3: 72 unrouted;       REAL time: 1 secs 
+
+Phase 4: 72 unrouted; (0)      REAL time: 1 secs 
+
+Phase 5: 72 unrouted; (0)      REAL time: 1 secs 
+
+Phase 6: 72 unrouted; (0)      REAL time: 1 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 1 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 1 secs 
+
+Phase 9: 0 unrouted; (0)      REAL time: 1 secs 
+
+
+Total REAL time to Router completion: 1 secs 
+Total CPU time to Router completion: 1 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|    clock50MHz_BUFGP |      BUFGMUX0| No   |   11 |  0.001     |  0.881      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  TS_clock50MHz = PERIOD TIMEGRP "clock50MH | SETUP   |    14.675ns|     5.325ns|       0|           0
+  z" 20 ns HIGH 50%                         | HOLD    |     0.770ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 3 secs 
+Total CPU time to PAR completion: 2 secs 
+
+Peak Memory Usage:  201 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 4
+Number of info messages: 0
+
+Writing design to file s3board_toplevel.ncd
+
+
+
+PAR done!

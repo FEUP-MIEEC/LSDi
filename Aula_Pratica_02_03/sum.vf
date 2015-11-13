@@ -1,0 +1,86 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : sch2verilog
+//  /   /         Filename : sum.vf
+// /___/   /\     Timestamp : 11/12/2015 16:22:21
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\10.1\ISE\bin\nt64\unwrapped\sch2verilog.exe -intstyle ise -family spartan3 -w F:/LSDI/1MIEEC01/good/LSDI2015_lab2/sum.sch sum.vf
+//Design Name: sum
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module sum(A, 
+           B, 
+           Ci, 
+           S);
+
+    input A;
+    input B;
+    input Ci;
+   output S;
+   
+   wire XLXN_21;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_28;
+   wire XLXN_29;
+   wire XLXN_30;
+   wire XLXN_31;
+   wire XLXN_32;
+   wire XLXN_33;
+   wire XLXN_45;
+   wire XLXN_46;
+   
+   NOT XLXI_5 (.a(A), 
+               .o(XLXN_21));
+   NOT XLXI_6 (.a(B), 
+               .o(XLXN_24));
+   NOT XLXI_7 (.a(Ci), 
+               .o(XLXN_29));
+   AND XLXI_8 (.a(A), 
+               .b(XLXN_29), 
+               .o(XLXN_23));
+   AND XLXI_9 (.a(XLXN_23), 
+               .b(XLXN_24), 
+               .o(XLXN_30));
+   AND XLXI_10 (.a(XLXN_21), 
+                .b(XLXN_24), 
+                .o(XLXN_26));
+   AND XLXI_11 (.a(A), 
+                .b(B), 
+                .o(XLXN_27));
+   AND XLXI_12 (.a(XLXN_21), 
+                .b(B), 
+                .o(XLXN_28));
+   AND XLXI_13 (.a(XLXN_26), 
+                .b(Ci), 
+                .o(XLXN_31));
+   AND XLXI_14 (.a(XLXN_27), 
+                .b(Ci), 
+                .o(XLXN_32));
+   AND XLXI_15 (.a(XLXN_28), 
+                .b(XLXN_29), 
+                .o(XLXN_33));
+   OR XLXI_16 (.a(XLXN_30), 
+               .b(XLXN_31), 
+               .o(XLXN_45));
+   OR XLXI_17 (.a(XLXN_32), 
+               .b(XLXN_33), 
+               .o(XLXN_46));
+   OR XLXI_18 (.a(XLXN_45), 
+               .b(XLXN_46), 
+               .o(S));
+endmodule

@@ -1,0 +1,9 @@
+sch2verilog -intstyle ise -family spartan3   -w "C:/Users/xilinx/Desktop/LSDI2011_lab2/sum.sch" sum.vf
+sch2verilog -intstyle ise -family spartan3   -w "F:/LSDI2011_lab2/sum.sch" sum.vf
+sch2verilog -intstyle ise -family spartan3   -w "C:/Users/nsousa/Desktop/LSDI2011_lab2/sum.sch" sum.vf
+sch2verilog -intstyle ise -family spartan3   -w "C:/Documents and Settings/rui fernandes/Desktop/TP2/LSDI2011_lab2/sum.sch" sum.vf
+sch2verilog -intstyle ise -family spartan3   -w "F:/LSDI2/LSDI2011_lab2_completo/sum.sch" sum.vf
+sch2verilog -intstyle ise -family spartan3   -w "C:/Users/xilinx/Desktop/LSDI2015_lab2/sum.sch" sum.vf
+sch2verilog -intstyle ise -family spartan3   -w "C:/Users/xilinx/Desktop/LSDI2015_lab2/sum.sch" sum.vf
+sch2verilog -intstyle ise -family spartan3   -w "C:/Users/xilinx/Desktop/LSDI2015_lab2/sum.sch" sum.vf
+sch2verilog -intstyle ise -family spartan3   -w "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/sum.sch" sum.vf

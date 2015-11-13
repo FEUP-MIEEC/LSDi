@@ -1,0 +1,567 @@
+Release 10.1 - xst K.31 (nt64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to F:/LSDI/1MIEEC01/good/LSDI2015_lab2/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to F:/LSDI/1MIEEC01/good/LSDI2015_lab2/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: s3board_toplevel.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "s3board_toplevel.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "s3board_toplevel"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : s3board_toplevel
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : s3board_toplevel.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "OR.v" in library work
+Compiling verilog file "NOT.v" in library work
+Module <OR> compiled
+Compiling verilog file "AND.v" in library work
+Module <NOT> compiled
+Compiling verilog file "sum.vf" in library work
+Module <AND> compiled
+Compiling verilog file "carryout.vf" in library work
+Module <sum> compiled
+Compiling verilog file "fulladder.vf" in library work
+Module <carryout> compiled
+Compiling verilog file "adder4b.vf" in library work
+Module <fulladder> compiled
+Compiling verilog file "disp7seg_clockgen.v" in library work
+Module <adder4b> compiled
+Compiling verilog file "disp7seg.v" in library work
+Module <disp7seg_clockgen> compiled
+Compiling verilog file "addsub4b.v" in library work
+Module <disp7seg> compiled
+Compiling verilog file "s3board_toplevel.v" in library work
+Module <addsub4b> compiled
+Module <s3board_toplevel> compiled
+No errors in compilation
+Analysis of file <"s3board_toplevel.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <s3board_toplevel> in library <work>.
+
+Analyzing hierarchy for module <addsub4b> in library <work>.
+
+Analyzing hierarchy for module <disp7seg> in library <work>.
+
+Analyzing hierarchy for module <disp7seg_clockgen> in library <work>.
+
+Analyzing hierarchy for module <adder4b> in library <work>.
+
+Analyzing hierarchy for module <fulladder> in library <work>.
+
+Analyzing hierarchy for module <carryout> in library <work>.
+
+Analyzing hierarchy for module <sum> in library <work>.
+
+Analyzing hierarchy for module <AND> in library <work>.
+
+Analyzing hierarchy for module <OR> in library <work>.
+
+Analyzing hierarchy for module <NOT> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <s3board_toplevel>.
+Module <s3board_toplevel> is correct for synthesis.
+ 
+Analyzing module <addsub4b> in library <work>.
+WARNING:Xst:916 - "addsub4b.v" line 11: Delay is ignored for synthesis.
+WARNING:Xst:916 - "addsub4b.v" line 12: Delay is ignored for synthesis.
+WARNING:Xst:916 - "addsub4b.v" line 13: Delay is ignored for synthesis.
+WARNING:Xst:916 - "addsub4b.v" line 14: Delay is ignored for synthesis.
+Module <addsub4b> is correct for synthesis.
+ 
+Analyzing module <adder4b> in library <work>.
+Module <adder4b> is correct for synthesis.
+ 
+Analyzing module <fulladder> in library <work>.
+Module <fulladder> is correct for synthesis.
+ 
+Analyzing module <carryout> in library <work>.
+Module <carryout> is correct for synthesis.
+ 
+Analyzing module <AND> in library <work>.
+WARNING:Xst:916 - "AND.v" line 26: Delay is ignored for synthesis.
+Module <AND> is correct for synthesis.
+ 
+Analyzing module <OR> in library <work>.
+WARNING:Xst:916 - "OR.v" line 26: Delay is ignored for synthesis.
+Module <OR> is correct for synthesis.
+ 
+Analyzing module <sum> in library <work>.
+Module <sum> is correct for synthesis.
+ 
+Analyzing module <NOT> in library <work>.
+WARNING:Xst:916 - "NOT.v" line 27: Delay is ignored for synthesis.
+Module <NOT> is correct for synthesis.
+ 
+Analyzing module <disp7seg> in library <work>.
+Module <disp7seg> is correct for synthesis.
+ 
+Analyzing module <disp7seg_clockgen> in library <work>.
+Module <disp7seg_clockgen> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <disp7seg>.
+    Related source file is "disp7seg.v".
+    Found finite state machine <FSM_0> for signal <en_disp>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clockscan (rising_edge)                        |
+    | Clock enable       | clkenable (positive)                           |
+    | Reset              | areset (positive)                              |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0111                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16x7-bit ROM for signal <segments>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 ROM(s).
+Unit <disp7seg> synthesized.
+
+
+Synthesizing Unit <disp7seg_clockgen>.
+    Related source file is "disp7seg_clockgen.v".
+    Found 1-bit register for signal <clocken>.
+    Found 18-bit up counter for signal <clkdiv>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <disp7seg_clockgen> synthesized.
+
+
+Synthesizing Unit <AND>.
+    Related source file is "AND.v".
+Unit <AND> synthesized.
+
+
+Synthesizing Unit <OR>.
+    Related source file is "OR.v".
+Unit <OR> synthesized.
+
+
+Synthesizing Unit <NOT>.
+    Related source file is "NOT.v".
+Unit <NOT> synthesized.
+
+
+Synthesizing Unit <carryout>.
+    Related source file is "carryout.vf".
+Unit <carryout> synthesized.
+
+
+Synthesizing Unit <sum>.
+    Related source file is "sum.vf".
+Unit <sum> synthesized.
+
+
+Synthesizing Unit <fulladder>.
+    Related source file is "fulladder.vf".
+Unit <fulladder> synthesized.
+
+
+Synthesizing Unit <adder4b>.
+    Related source file is "adder4b.vf".
+Unit <adder4b> synthesized.
+
+
+Synthesizing Unit <addsub4b>.
+    Related source file is "addsub4b.v".
+    Found 1-bit xor2 for signal <w0>.
+    Found 1-bit xor2 for signal <w1>.
+    Found 1-bit xor2 for signal <w2>.
+    Found 1-bit xor2 for signal <w3>.
+Unit <addsub4b> synthesized.
+
+
+Synthesizing Unit <s3board_toplevel>.
+    Related source file is "s3board_toplevel.v".
+WARNING:Xst:647 - Input <btn1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btn2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <s3board_toplevel> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 1
+ 18-bit up counter                                     : 1
+# Registers                                            : 1
+ 1-bit register                                        : 1
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <d7seg/en_disp/FSM> on signal <en_disp[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0111  | 00
+ 1011  | 01
+ 1101  | 11
+ 1110  | 10
+-------------------
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx\10.1\ISE.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 1
+ 18-bit up counter                                     : 1
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <s3board_toplevel> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block s3board_toplevel, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 21
+ Flip-Flops                                            : 21
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : s3board_toplevel.ngr
+Top Level Output File Name         : s3board_toplevel
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 33
+
+Cell Usage :
+# BELS                             : 119
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 17
+#      LUT2                        : 25
+#      LUT3                        : 5
+#      LUT4                        : 23
+#      MUXCY                       : 22
+#      MUXF5                       : 6
+#      VCC                         : 1
+#      XORCY                       : 17
+# FlipFlops/Latches                : 21
+#      FDC                         : 19
+#      FDCE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 30
+#      IBUF                        : 10
+#      OBUF                        : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                       40  out of   1920     2%  
+ Number of Slice Flip Flops:             21  out of   3840     0%  
+ Number of 4 input LUTs:                 72  out of   3840     1%  
+ Number of IOs:                          33
+ Number of bonded IOBs:                  31  out of    173    17%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock50MHz                         | BUFGP                  | 21    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+btn3                               | IBUF                   | 21    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.705ns (Maximum Frequency: 175.291MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 12.796ns
+   Maximum combinational path delay: 13.943ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock50MHz'
+  Clock period: 5.705ns (frequency: 175.291MHz)
+  Total number of paths / destination ports: 517 / 23
+-------------------------------------------------------------------------
+Delay:               5.705ns (Levels of Logic = 19)
+  Source:            disp7seg_clockgen_1/clkdiv_1 (FF)
+  Destination:       disp7seg_clockgen_1/clkdiv_17 (FF)
+  Source Clock:      clock50MHz rising
+  Destination Clock: clock50MHz rising
+
+  Data Path: disp7seg_clockgen_1/clkdiv_1 to disp7seg_clockgen_1/clkdiv_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.626   1.040  disp7seg_clockgen_1/clkdiv_1 (disp7seg_clockgen_1/clkdiv_1)
+     LUT1:I0->O            1   0.479   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<1>_rt (disp7seg_clockgen_1/Mcount_clkdiv_cy<1>_rt)
+     MUXCY:S->O            1   0.435   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<1> (disp7seg_clockgen_1/Mcount_clkdiv_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<2> (disp7seg_clockgen_1/Mcount_clkdiv_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<3> (disp7seg_clockgen_1/Mcount_clkdiv_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<4> (disp7seg_clockgen_1/Mcount_clkdiv_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<5> (disp7seg_clockgen_1/Mcount_clkdiv_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<6> (disp7seg_clockgen_1/Mcount_clkdiv_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<7> (disp7seg_clockgen_1/Mcount_clkdiv_cy<7>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<8> (disp7seg_clockgen_1/Mcount_clkdiv_cy<8>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<9> (disp7seg_clockgen_1/Mcount_clkdiv_cy<9>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<10> (disp7seg_clockgen_1/Mcount_clkdiv_cy<10>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<11> (disp7seg_clockgen_1/Mcount_clkdiv_cy<11>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<12> (disp7seg_clockgen_1/Mcount_clkdiv_cy<12>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<13> (disp7seg_clockgen_1/Mcount_clkdiv_cy<13>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<14> (disp7seg_clockgen_1/Mcount_clkdiv_cy<14>)
+     MUXCY:CI->O           1   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<15> (disp7seg_clockgen_1/Mcount_clkdiv_cy<15>)
+     MUXCY:CI->O           0   0.056   0.000  disp7seg_clockgen_1/Mcount_clkdiv_cy<16> (disp7seg_clockgen_1/Mcount_clkdiv_cy<16>)
+     XORCY:CI->O           1   0.786   0.851  disp7seg_clockgen_1/Mcount_clkdiv_xor<17> (Result<17>)
+     LUT2:I1->O            1   0.479   0.000  disp7seg_clockgen_1/Mcount_clkdiv_eqn_171 (disp7seg_clockgen_1/Mcount_clkdiv_eqn_17)
+     FDC:D                     0.176          disp7seg_clockgen_1/clkdiv_17
+    ----------------------------------------
+    Total                      5.705ns (3.814ns logic, 1.891ns route)
+                                       (66.8% logic, 33.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock50MHz'
+  Total number of paths / destination ports: 148 / 11
+-------------------------------------------------------------------------
+Offset:              12.796ns (Levels of Logic = 7)
+  Source:            d7seg/en_disp_FSM_FFd1 (FF)
+  Destination:       sega (PAD)
+  Source Clock:      clock50MHz rising
+
+  Data Path: d7seg/en_disp_FSM_FFd1 to sega
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            15   0.626   1.180  d7seg/en_disp_FSM_FFd1 (d7seg/en_disp_FSM_FFd1)
+     LUT4:I1->O            1   0.479   0.000  d7seg/out_display<1>106_SW02 (d7seg/out_display<1>106_SW01)
+     MUXF5:I0->O           1   0.314   0.851  d7seg/out_display<1>106_SW0_f5 (N7)
+     LUT4:I1->O            2   0.479   0.804  d7seg/out_display<1>106 (d7seg/out_display<1>106)
+     LUT4:I2->O            1   0.479   0.000  d7seg/out_display<1>1571 (d7seg/out_display<1>157)
+     MUXF5:I1->O           7   0.314   1.201  d7seg/out_display<1>157_f5 (d7seg/out_display<1>)
+     LUT4:I0->O            1   0.479   0.681  d7seg/seg_c1 (segc_OBUF)
+     OBUF:I->O                 4.909          segc_OBUF (segc)
+    ----------------------------------------
+    Total                     12.796ns (8.079ns logic, 4.717ns route)
+                                       (63.1% logic, 36.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 588 / 7
+-------------------------------------------------------------------------
+Delay:               13.943ns (Levels of Logic = 9)
+  Source:            sw1 (PAD)
+  Destination:       segd (PAD)
+
+  Data Path: sw1 to segd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.715   1.148  sw1_IBUF (sw1_IBUF)
+     LUT3:I0->O            1   0.479   0.000  as4/AS/XLXI_5/XLXI_1/XLXI_4/o_F (N11)
+     MUXF5:I0->O           3   0.314   0.794  as4/AS/XLXI_5/XLXI_1/XLXI_4/o (as4/AS/XLXN_11)
+     LUT4:I3->O            2   0.479   0.768  as4/AS/XLXI_7/XLXI_1/XLXI_4/o1 (as4/AS/XLXN_12)
+     LUT4:I3->O            1   0.479   0.704  d7seg/out_display<0>15 (d7seg/out_display<0>15)
+     LUT4:I3->O            1   0.479   0.000  d7seg/out_display<0>70_F (N13)
+     MUXF5:I0->O           7   0.314   1.201  d7seg/out_display<0>70 (d7seg/out_display<0>)
+     LUT4:I0->O            1   0.479   0.681  d7seg/seg_d1 (segd_OBUF)
+     OBUF:I->O                 4.909          segd_OBUF (segd)
+    ----------------------------------------
+    Total                     13.943ns (8.647ns logic, 5.296ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.07 secs
+ 
+--> 
+
+Total memory usage is 240944 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

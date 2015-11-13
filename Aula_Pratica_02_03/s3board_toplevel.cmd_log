@@ -1,0 +1,31 @@
+xst -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -ifn "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/s3board_toplevel.xst" -ofn "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/s3board_toplevel.syr"
+ngdbuild -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-5 "s3board_toplevel.ngc" s3board_toplevel.ngd
+map -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -p xc3s200-ft256-5 -cm area -pr off -k 4 -c 100 -o s3board_toplevel_map.ncd s3board_toplevel.ngd s3board_toplevel.pcf
+par -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -w -intstyle ise -ol std -t 1 s3board_toplevel_map.ncd s3board_toplevel.ncd s3board_toplevel.pcf
+trce -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -e 3 -s 5 -xml s3board_toplevel s3board_toplevel.ncd -o s3board_toplevel.twr s3board_toplevel.pcf -ucf s3board_toplevel.ucf
+bitgen -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -f s3board_toplevel.ut s3board_toplevel.ncd
+xst -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -ifn "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/s3board_toplevel.xst" -ofn "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/s3board_toplevel.syr"
+ngdbuild -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-5 "s3board_toplevel.ngc" s3board_toplevel.ngd
+map -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -p xc3s200-ft256-5 -cm area -pr off -k 4 -c 100 -o s3board_toplevel_map.ncd s3board_toplevel.ngd s3board_toplevel.pcf
+par -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -w -intstyle ise -ol std -t 1 s3board_toplevel_map.ncd s3board_toplevel.ncd s3board_toplevel.pcf
+trce -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -e 3 -s 5 -xml s3board_toplevel s3board_toplevel.ncd -o s3board_toplevel.twr s3board_toplevel.pcf -ucf s3board_toplevel.ucf
+bitgen -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -f s3board_toplevel.ut s3board_toplevel.ncd
+bitgen -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -f s3board_toplevel.ut s3board_toplevel.ncd
+bitgen -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -f s3board_toplevel.ut s3board_toplevel.ncd
+ngdbuild -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-5 "s3board_toplevel.ngc" s3board_toplevel.ngd
+map -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -p xc3s200-ft256-5 -cm area -pr off -k 4 -c 100 -o s3board_toplevel_map.ncd s3board_toplevel.ngd s3board_toplevel.pcf
+par -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -w -intstyle ise -ol std -t 1 s3board_toplevel_map.ncd s3board_toplevel.ncd s3board_toplevel.pcf
+trce -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -e 3 -s 5 -xml s3board_toplevel s3board_toplevel.ncd -o s3board_toplevel.twr s3board_toplevel.pcf -ucf s3board_toplevel.ucf
+bitgen -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -f s3board_toplevel.ut s3board_toplevel.ncd
+xst -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -ifn "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/s3board_toplevel.xst" -ofn "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/s3board_toplevel.syr"
+ngdbuild -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-5 "s3board_toplevel.ngc" s3board_toplevel.ngd
+map -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -p xc3s200-ft256-5 -cm area -pr off -k 4 -c 100 -o s3board_toplevel_map.ncd s3board_toplevel.ngd s3board_toplevel.pcf
+par -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -w -intstyle ise -ol std -t 1 s3board_toplevel_map.ncd s3board_toplevel.ncd s3board_toplevel.pcf
+trce -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -e 3 -s 5 -xml s3board_toplevel s3board_toplevel.ncd -o s3board_toplevel.twr s3board_toplevel.pcf -ucf s3board_toplevel.ucf
+bitgen -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -f s3board_toplevel.ut s3board_toplevel.ncd
+xst -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -ifn "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/s3board_toplevel.xst" -ofn "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/s3board_toplevel.syr"
+ngdbuild -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-5 "s3board_toplevel.ngc" s3board_toplevel.ngd
+map -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -p xc3s200-ft256-5 -cm area -pr off -k 4 -c 100 -o s3board_toplevel_map.ncd s3board_toplevel.ngd s3board_toplevel.pcf
+par -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -w -intstyle ise -ol std -t 1 s3board_toplevel_map.ncd s3board_toplevel.ncd s3board_toplevel.pcf
+trce -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -e 3 -s 5 -xml s3board_toplevel s3board_toplevel.ncd -o s3board_toplevel.twr s3board_toplevel.pcf -ucf s3board_toplevel.ucf
+bitgen -ise "F:/LSDI/1MIEEC01/good/LSDI2015_lab2/LSDI2015_lab2.ise" -intstyle ise -f s3board_toplevel.ut s3board_toplevel.ncd

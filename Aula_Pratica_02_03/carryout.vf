@@ -1,0 +1,53 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : sch2verilog
+//  /   /         Filename : carryout.vf
+// /___/   /\     Timestamp : 11/12/2015 16:22:19
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\10.1\ISE\bin\nt64\unwrapped\sch2verilog.exe -intstyle ise -family spartan3 -w F:/LSDI/1MIEEC01/good/LSDI2015_lab2/carryout.sch carryout.vf
+//Design Name: carryout
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module carryout(A, 
+                B, 
+                Ci, 
+                Co);
+
+    input A;
+    input B;
+    input Ci;
+   output Co;
+   
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_13;
+   
+   AND XLXI_1 (.a(A), 
+               .b(Ci), 
+               .o(XLXN_9));
+   AND XLXI_2 (.a(B), 
+               .b(A), 
+               .o(XLXN_8));
+   AND XLXI_3 (.a(Ci), 
+               .b(B), 
+               .o(XLXN_7));
+   OR XLXI_4 (.a(XLXN_9), 
+              .b(XLXN_13), 
+              .o(Co));
+   OR XLXI_5 (.a(XLXN_8), 
+              .b(XLXN_7), 
+              .o(XLXN_13));
+endmodule
