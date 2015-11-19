@@ -1,0 +1,523 @@
+iMPACT Version: 10.1
+
+iMPACT log file Started on Thu Nov 19 17:15:25 2015
+
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -bs
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+AutoDetecting cable. Please wait.
+PROGRESS_START - Starting Operation.
+Connecting to cable (Parallel Port - LPT1).
+Checking cable driver.
+ Driver windrvr6.sys version = 10.1.1.0. WinDriver v10.11 Jungo (c) 1997 - 2010 Build Date: Jan 17 2010 x86_64 64bit SYS20:02:14, version = 1011.
+ LPT base address = 0378h.
+ ECP base address = 0778h.
+Cable connection established.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+Attempting to identify devices in the boundary-scan chain configuration...// *** BATCH CMD : Identify 
+PROGRESS_START - Starting Operation.
+Identifying chain contents ....'1': : Manufacturer's ID =Xilinx xcf02s, Version : 0
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/10.1/ISE/xcf/data/xcf02s.bsd...
+INFO:iMPACT:501 - '1': Added Device xcf02s successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+'2': : Manufacturer's ID =Xilinx xc3s200, Version : 0
+INFO:iMPACT:1777 - 
+   Reading C:/Xilinx/10.1/ISE/spartan3/data/xc3s200.bsd...
+INFO:iMPACT:501 - '1': Added Device xc3s200 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+done.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+// *** BATCH CMD : identifyMPM 
+// *** BATCH CMD : assignFile -p 1 -file"F:/LSDI/1MIEEC01/3/LSDI2015_lab3/lsdi_lab3.bit"
+'1': Loading file 'F:/LSDI/1MIEEC01/3/LSDI2015_lab3/lsdi_lab3.bit' ...
+done.
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+----------------------------------------------------------------------
+INFO:iMPACT:501 - '1': Added Device xc3s200 successfully.
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         0
+DCI Matched                                       :         0
+legacy input error                                :         0
+status of GTS_CFG_B                               :         0
+status of GWE                                     :         0
+status of GHIGH                                   :         0
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         0
+value of CFG_RDY (INIT_B)                         :         0
+DONEIN input from DONE pin                        :         0
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0000 0000 0000 0000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+// *** BATCH CMD : Program -p 1 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00001111111111111111111111111111
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00000001010000010100000010010011
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+PROGRESS_START - Starting Operation.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         1
+DCI Matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 0011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         1
+DCI Matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 0011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         1
+DCI Matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 0011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      5 sec.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         0
+DCI Matched                                       :         0
+legacy input error                                :         0
+status of GTS_CFG_B                               :         0
+status of GWE                                     :         0
+status of GHIGH                                   :         0
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         0
+value of CFG_RDY (INIT_B)                         :         0
+DONEIN input from DONE pin                        :         0
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0000 0000 0000 0000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      5 sec.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         1
+DCI Matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 0011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         0
+DCI Matched                                       :         0
+legacy input error                                :         0
+status of GTS_CFG_B                               :         0
+status of GWE                                     :         0
+status of GHIGH                                   :         0
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         0
+value of CFG_RDY (INIT_B)                         :         0
+DONEIN input from DONE pin                        :         0
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0000 0000 0000 0000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         1
+DCI Matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 0011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         1
+DCI Matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 0011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         1
+DCI Matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 0011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         1
+DCI Matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 0011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         1
+DCI Matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 0011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+done.
+'1': Reading status register contents...
+CRC error                                         :         0
+RESERVED                                          :         0
+DCM locked                                        :         1
+DCI Matched                                       :         1
+legacy input error                                :         0
+status of GTS_CFG_B                               :         1
+status of GWE                                     :         1
+status of GHIGH                                   :         1
+value of MODE pin M0                              :         0
+value of MODE pin M1                              :         0
+value of MODE pin M2                              :         1
+value of CFG_RDY (INIT_B)                         :         1
+DONEIN input from DONE pin                        :         1
+ID_ERROR                                          :         0
+RESERVED                                          :         0
+RESERVED                                          :         0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 0111 0011 1000 0000 0000 0000 0000 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+ Match_cycle = NoWait.
+Match cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      4 sec.
+// *** BATCH CMD : ReadIdcode -p 1 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00001111111111111111111111111111
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00000001010000010100000010010011
+// *** BATCH CMD : ReadIdcode -p 1 
+Maximum TCK operating frequency for this device chain: 0.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': IDCODE is '00000001010000010100000010010011'
+'1': IDCODE is '01414093' (in hex).
+'1': : Manufacturer's ID =Xilinx xc3s200, Version : 0
+// *** BATCH CMD : saveProjectFile -file"F:\LSDI\1MIEEC01\3\LSDI2015_lab3/LSDI2015_lab3.ipf"
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 2
+----------------------------------------------------------------------
+// *** BATCH CMD : deleteDevice -position 1

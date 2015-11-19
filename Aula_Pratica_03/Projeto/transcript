@@ -1,0 +1,92 @@
+# Reading C:/Modeltech_xe_starter/tcl/vsim/pref.tcl 
+# do {lsdalu_testbench.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim XE III vlog 6.1e Compiler 2006.03 Mar  8 2006
+# -- Compiling module NOR8_MXILINX_detFlags
+# -- Compiling module detFlags
+# 
+# Top level modules:
+# 	detFlags
+# Model Technology ModelSim XE III vlog 6.1e Compiler 2006.03 Mar  8 2006
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# Model Technology ModelSim XE III vlog 6.1e Compiler 2006.03 Mar  8 2006
+# -- Compiling module lsdalu
+# 
+# Top level modules:
+# 	lsdalu
+# Model Technology ModelSim XE III vlog 6.1e Compiler 2006.03 Mar  8 2006
+# -- Compiling module lsdalu_testbench
+# 
+# Top level modules:
+# 	lsdalu_testbench
+# Model Technology ModelSim XE III vlog 6.1e Compiler 2006.03 Mar  8 2006
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -lib work -t 1ps lsdalu_testbench glbl 
+# Loading work.lsdalu_testbench
+# ** Error: (vsim-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.lsdalu
+# ** Error: (vsim-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.alu
+# ** Error: (vsim-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.detFlags
+# ** Error: (vsim-19) Failed to access library 'unimacro_ver' at "unimacro_ver".
+# No such file or directory. (errno = ENOENT)
+# Loading work.NOR8_MXILINX_detFlags
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/verilog/unisims_ver.FMAP
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/verilog/unisims_ver.OR4
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/verilog/unisims_ver.NOR2
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/verilog/unisims_ver.BUF
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/verilog/unisims_ver.AND2
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/verilog/unisims_ver.AND3B2
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/verilog/unisims_ver.OR2
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/verilog/unisims_ver.AND4B2
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/verilog/unisims_ver.AND4B1
+# Loading C:\Modeltech_xe_starter\win32xoem/../xilinx/verilog/unisims_ver.AND4B3
+# Loading work.glbl
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+# .main_pane.workspace
+# .main_pane.signals.interior.cs
+# ----- OPR=000: R = B
+#                    0 OPR=000   A=242 (11110010),  B=233 (11101001),  A op B = 233 (11101001)  FLAGS = 0010
+#                   10 OPR=000   A= 35 (00100011),  B= 36 (00100100),  A op B =  36 (00100100)  FLAGS = 0000
+#                   20 OPR=000   A= 10 (00001010),  B= 43 (00101011),  A op B =  43 (00101011)  FLAGS = 0000
+# ----- OPR=001: R = A - B
+#                   30 OPR=001   A= 10 (00001010),  B=  3 (00000011),  A op B =   7 (00000111)  FLAGS = 0000
+#                   40 OPR=001   A= 10 (00001010),  B= 12 (00001100),  A op B = 254 (11111110)  FLAGS = 0110
+#                   50 OPR=001   A= 10 (00001010),  B= 10 (00001010),  A op B =   0 (00000000)  FLAGS = 0001
+# ----- OPR=010: R = A + B
+#                   60 OPR=010   A= 10 (00001010),  B=  3 (00000011),  A op B =  13 (00001101)  FLAGS = 0000
+#                   70 OPR=010   A= 10 (00001010),  B=253 (11111101),  A op B =   7 (00000111)  FLAGS = 0100
+#                   80 OPR=010   A=112 (01110000),  B= 32 (00100000),  A op B = 144 (10010000)  FLAGS = 1010
+#                   90 OPR=010   A= 64 (01000000),  B=255 (11111111),  A op B =  63 (00111111)  FLAGS = 0100
+# ----- OPR=011: R = A xor B
+#                  100 OPR=011   A=  0 (00000000),  B= 15 (00001111),  A op B =  15 (00001111)  FLAGS = 0000
+#                  110 OPR=011   A=165 (10100101),  B=170 (10101010),  A op B =  15 (00001111)  FLAGS = 0000
+#                  120 OPR=011   A=112 (01110000),  B= 32 (00100000),  A op B =  80 (01010000)  FLAGS = 0000
+#                  130 OPR=011   A= 64 (01000000),  B=255 (11111111),  A op B = 191 (10111111)  FLAGS = 0010
+# ----- OPR=100: R = A >> 1
+#                  140 OPR=100   A=222 (11011110),  B=246 (11110110),  A op B = 239 (11101111)  FLAGS = 0010
+#                  150 OPR=100   A= 75 (01001011),  B= 10 (00001010),  A op B =  37 (00100101)  FLAGS = 0000
+#                  160 OPR=100   A=127 (01111111),  B=246 (11110110),  A op B =  63 (00111111)  FLAGS = 0000
+# ----- OPR=101: R = A << 1
+#                  170 OPR=101   A= 23 (00010111),  B= 11 (00001011),  A op B =  46 (00101110)  FLAGS = 0000
+#                  180 OPR=101   A= 37 (00100101),  B=246 (11110110),  A op B =  74 (01001010)  FLAGS = 1000
+#                  190 OPR=101   A= 99 (01100011),  B=123 (01111011),  A op B = 198 (11000110)  FLAGS = 0010
+# ----- OPR=110: R = A and B
+#                  200 OPR=110   A=  0 (00000000),  B= 15 (00001111),  A op B =   0 (00000000)  FLAGS = 0001
+#                  210 OPR=110   A=160 (10100000),  B=170 (10101010),  A op B = 160 (10100000)  FLAGS = 0010
+# ----- OPR=111: R = A or B
+#                  220 OPR=111   A=  0 (00000000),  B= 15 (00001111),  A op B =  15 (00001111)  FLAGS = 0000
+#                  230 OPR=111   A=160 (10100000),  B=170 (10101010),  A op B = 170 (10101010)  FLAGS = 0010
+# Break at lsdalu_testbench.v line 113
+# Simulation Breakpoint: Break at lsdalu_testbench.v line 113
+# MACRO ./lsdalu_testbench.fdo PAUSED at line 15

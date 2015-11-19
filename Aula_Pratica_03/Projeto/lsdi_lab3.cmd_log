@@ -1,0 +1,6 @@
+xst -ise "F:/LSDI/1MIEEC01/3/LSDI2015_lab3/LSDI2015_lab3.ise" -intstyle ise -ifn "F:/LSDI/1MIEEC01/3/LSDI2015_lab3/lsdi_lab3.xst" -ofn "F:/LSDI/1MIEEC01/3/LSDI2015_lab3/lsdi_lab3.syr"
+ngdbuild -ise "F:/LSDI/1MIEEC01/3/LSDI2015_lab3/LSDI2015_lab3.ise" -intstyle ise -dd _ngo  -nt timestamp -i -p xc3s200-ft256-5 "lsdi_lab3.ngc" lsdi_lab3.ngd
+map -ise "F:/LSDI/1MIEEC01/3/LSDI2015_lab3/LSDI2015_lab3.ise" -intstyle ise -p xc3s200-ft256-5 -cm area -pr off -k 4 -c 100 -o lsdi_lab3_map.ncd lsdi_lab3.ngd lsdi_lab3.pcf
+par -ise "F:/LSDI/1MIEEC01/3/LSDI2015_lab3/LSDI2015_lab3.ise" -w -intstyle ise -ol std -t 1 lsdi_lab3_map.ncd lsdi_lab3.ncd lsdi_lab3.pcf
+trce -ise "F:/LSDI/1MIEEC01/3/LSDI2015_lab3/LSDI2015_lab3.ise" -intstyle ise -e 3 -s 5 -xml lsdi_lab3 lsdi_lab3.ncd -o lsdi_lab3.twr lsdi_lab3.pcf -ucf s3board_toplevel.ucf
+bitgen -ise "F:/LSDI/1MIEEC01/3/LSDI2015_lab3/LSDI2015_lab3.ise" -intstyle ise -f lsdi_lab3.ut lsdi_lab3.ncd

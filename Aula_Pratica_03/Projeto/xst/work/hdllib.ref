@@ -1,0 +1,10 @@
+MO autorepeat NULL autorepeat.v vlg7A/autorepeat.bin 1447953274
+MO lsdi_lab3 NULL lsdi_lab3.v vlg25/lsdi__lab3.bin 1447953274
+MO datapath NULL datapath.v vlg27/datapath.bin 1447953274
+MO disp7seg NULL disp7seg.v vlg7A/disp7seg.bin 1447953274
+MO debounce NULL debounce.v vlg1D/debounce.bin 1447953274
+MO disp7seg_clockgen NULL disp7seg_clockgen.v vlg37/disp7seg__clockgen.bin 1447953274
+MO detFlags NULL detFlags.vf vlg36/det_flags.bin 1447953274
+MO lsdalu NULL lsdalu.v vlg7D/lsdalu.bin 1447953274
+MO NOR8_MXILINX_detFlags NULL detFlags.vf vlg54/_n_o_r8___m_x_i_l_i_n_x__det_flags.bin 1447953274
+MO alu NULL alu.v vlg0A/alu.bin 1447953274

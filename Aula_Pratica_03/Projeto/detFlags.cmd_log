@@ -1,0 +1,3 @@
+sch2verilog -intstyle ise -family spartan3   -w "F:/LSDI/1MIEEC01/3/LSDI2015_lab3/detFlags.sch" detFlags.vf
+sch2verilog -intstyle ise -family spartan3   -w "F:/LSDI/1MIEEC01/3/LSDI2015_lab3/detFlags.sch" detFlags.vf
+sch2verilog -intstyle ise -family spartan3   -w "F:/LSDI/1MIEEC01/3/LSDI2015_lab3/detFlags.sch" detFlags.vf

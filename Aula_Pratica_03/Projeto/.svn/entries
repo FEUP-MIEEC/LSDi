@@ -1,0 +1,147 @@
+10
+
+dir
+0
+https://svn.fe.up.pt/repos/lsdi/labs/lab3/LSDI2012_lab3
+https://svn.fe.up.pt/repos/lsdi
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ecec6c04-caf4-4e21-abac-a3e606b50fd2
+
+LSDI2012_lab3.ise
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+LSDI2012_lab3.restore
+file
+
+
+
+add
+
+s3board_toplevel.ucf
+file
+
+
+
+add
+
+alu.v
+file
+
+
+
+add
+
+lsdalu_testbench.v
+file
+
+
+
+add
+
+debounce.v
+file
+
+
+
+add
+
+lsdalu.v
+file
+
+
+
+add
+
+disp7seg.v
+file
+
+
+
+add
+
+datapath.v
+file
+
+
+
+add
+
+detFlags.jhd
+file
+
+
+
+add
+
+disp7seg_clockgen.v
+file
+
+
+
+add
+
+_xmsgs
+dir
+
+
+
+add
+
+lsdi_lab3.v
+file
+
+
+
+add
+
+detFlags.sch
+file
+
+
+
+add
+
+lsdi_lab3_summary.html
+file
+
+
+
+add
+
+autorepeat.v
+file
+
+
+
+add
+

@@ -1,0 +1,78 @@
+m255
+13
+cModel Technology
+dF:\LSDI\1MIEEC01\3\LSDI2015_lab3
+valu
+IV]NFT7OA1^DChZl^cC<512
+V=<Zf3mUB3lhg9b2XjUgnK1
+w1447949526
+Falu.v
+L0 3
+V=<Zf3mUB3lhg9b2XjUgnK1
+OX;L;6.1e;31
+r1
+31
+o+acc -O0
+tGenerateLoopIterationMax 100000
+vdetFlags
+IIYCTl0>Lm6hl6zOIM3G[10
+V03[c2cl2:5RcDN_[Jo_Vc3
+w1447952788
+FdetFlags.vf
+L0 83
+V03[c2cl2:5RcDN_[Jo_Vc3
+OX;L;6.1e;31
+r1
+31
+o+acc -O0
+tGenerateLoopIterationMax 100000
+ndet@flags
+vglbl
+Ia1XW_f4eVn1ig2V@eO6hH2
+VnN]4Gon>inod6>M^M2[SV1
+w1202685744
+FC:/Xilinx/10.1/ISE/verilog/src/glbl.v
+L0 5
+VnN]4Gon>inod6>M^M2[SV1
+OX;L;6.1e;31
+r1
+31
+o+acc -O0
+tGenerateLoopIterationMax 100000
+vlsdalu
+I>TU?2Snh_@TR3=PY]=3[12
+VgQ1aa`zOPBegOTBE=OK0@2
+w1447949526
+Flsdalu.v
+L0 3
+VgQ1aa`zOPBegOTBE=OK0@2
+OX;L;6.1e;31
+r1
+31
+o+acc -O0
+tGenerateLoopIterationMax 100000
+vlsdalu_testbench
+Io]bQcC2DLMlhAXN^D:]GG3
+ViF27[Lb<3dDi4>:l3HdLJ2
+w1447949526
+Flsdalu_testbench.v
+L0 3
+ViF27[Lb<3dDi4>:l3HdLJ2
+OX;L;6.1e;31
+r1
+31
+o+acc -O0
+tGenerateLoopIterationMax 100000
+vNOR8_MXILINX_detFlags
+I]Gbzm5XKKTU756SIJeOjI0
+VLeznS3=iC=cO`kVIIm3DI0
+w1447952788
+FdetFlags.vf
+L0 23
+VLeznS3=iC=cO`kVIIm3DI0
+OX;L;6.1e;31
+r1
+31
+o+acc -O0
+tGenerateLoopIterationMax 100000
+n@n@o@r8_@m@x@i@l@i@n@x_det@flags

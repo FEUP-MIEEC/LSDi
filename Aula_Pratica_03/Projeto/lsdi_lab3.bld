@@ -1,0 +1,35 @@
+Release 10.1 ngdbuild K.31 (nt64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\10.1\ISE\bin\nt64\unwrapped\ngdbuild.exe -ise
+F:/LSDI/1MIEEC01/3/LSDI2015_lab3/LSDI2015_lab3.ise -intstyle ise -dd _ngo -nt
+timestamp -i -p xc3s200-ft256-5 lsdi_lab3.ngc lsdi_lab3.ngd
+
+Reading NGO file "F:/LSDI/1MIEEC01/3/LSDI2015_lab3/lsdi_lab3.ngc" ...
+Reading in constraint information from 's3board_toplevel.ucf'...
+Gathering constraint information from source properties...
+Done.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+Checking Partitions ...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 124872 kilobytes
+
+Writing NGD file "lsdi_lab3.ngd" ...
+
+Writing NGDBUILD log file "lsdi_lab3.bld"...

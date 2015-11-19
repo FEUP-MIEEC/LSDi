@@ -1,0 +1,168 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : sch2verilog
+//  /   /         Filename : detFlags.vf
+// /___/   /\     Timestamp : 11/19/2015 17:14:28
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\10.1\ISE\bin\nt64\unwrapped\sch2verilog.exe -intstyle ise -family spartan3 -w F:/LSDI/1MIEEC01/3/LSDI2015_lab3/detFlags.sch detFlags.vf
+//Design Name: detFlags
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module NOR8_MXILINX_detFlags(I0, 
+                             I1, 
+                             I2, 
+                             I3, 
+                             I4, 
+                             I5, 
+                             I6, 
+                             I7, 
+                             O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input I4;
+    input I5;
+    input I6;
+    input I7;
+   output O;
+   
+   wire dummy;
+   wire S0;
+   wire S1;
+   wire O_DUMMY;
+   
+   assign O = O_DUMMY;
+   FMAP I_36_29 (.I1(I0), 
+                 .I2(I1), 
+                 .I3(I2), 
+                 .I4(I3), 
+                 .O(S0));
+   // synthesis attribute RLOC of I_36_29 is "X0Y0"
+   OR4 I_36_110 (.I0(I0), 
+                 .I1(I1), 
+                 .I2(I2), 
+                 .I3(I3), 
+                 .O(S0));
+   OR4 I_36_127 (.I0(I4), 
+                 .I1(I5), 
+                 .I2(I6), 
+                 .I3(I7), 
+                 .O(S1));
+   FMAP I_36_138 (.I1(I4), 
+                  .I2(I5), 
+                  .I3(I6), 
+                  .I4(I7), 
+                  .O(S1));
+   // synthesis attribute RLOC of I_36_138 is "X0Y0"
+   NOR2 I_36_140 (.I0(S0), 
+                  .I1(S1), 
+                  .O(O_DUMMY));
+   FMAP I_36_144 (.I1(S0), 
+                  .I2(S1), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(O_DUMMY));
+   // synthesis attribute RLOC of I_36_144 is "X0Y1"
+endmodule
+`timescale 1ns / 1ps
+
+module detFlags(Co, 
+                OPR, 
+                R, 
+                sA, 
+                sB, 
+                CARRY, 
+                OVFL, 
+                SINAL, 
+                ZERO);
+
+    input Co;
+    input [2:0] OPR;
+    input [7:0] R;
+    input sA;
+    input sB;
+   output CARRY;
+   output OVFL;
+   output SINAL;
+   output ZERO;
+   
+   wire XLXN_29;
+   wire XLXN_30;
+   wire XLXN_33;
+   wire XLXN_77;
+   wire XLXN_78;
+   wire XLXN_79;
+   wire XLXN_80;
+   wire XLXN_88;
+   wire CARRY_DUMMY;
+   
+   assign CARRY = CARRY_DUMMY;
+   NOR8_MXILINX_detFlags XLXI_3 (.I0(R[7]), 
+                                 .I1(R[6]), 
+                                 .I2(R[5]), 
+                                 .I3(R[4]), 
+                                 .I4(R[3]), 
+                                 .I5(R[2]), 
+                                 .I6(R[1]), 
+                                 .I7(R[0]), 
+                                 .O(ZERO));
+   // synthesis attribute HU_SET of XLXI_3 is "XLXI_3_0"
+   BUF XLXI_4 (.I(R[7]), 
+               .O(SINAL));
+   AND2 XLXI_6 (.I0(XLXN_33), 
+                .I1(Co), 
+                .O(CARRY_DUMMY));
+   AND3B2 XLXI_9 (.I0(OPR[2]), 
+                  .I1(OPR[0]), 
+                  .I2(OPR[1]), 
+                  .O(XLXN_29));
+   AND3B2 XLXI_10 (.I0(OPR[2]), 
+                   .I1(OPR[0]), 
+                   .I2(OPR[1]), 
+                   .O(XLXN_30));
+   OR2 XLXI_11 (.I0(XLXN_30), 
+                .I1(XLXN_29), 
+                .O(XLXN_33));
+   AND4B2 XLXI_25 (.I0(R[7]), 
+                   .I1(OPR[0]), 
+                   .I2(sA), 
+                   .I3(sB), 
+                   .O(XLXN_77));
+   AND4B2 XLXI_26 (.I0(sA), 
+                   .I1(R[7]), 
+                   .I2(sB), 
+                   .I3(OPR[0]), 
+                   .O(XLXN_78));
+   AND4B1 XLXI_27 (.I0(sB), 
+                   .I1(sA), 
+                   .I2(R[7]), 
+                   .I3(OPR[0]), 
+                   .O(XLXN_79));
+   AND4B3 XLXI_28 (.I0(sB), 
+                   .I1(sA), 
+                   .I2(OPR[0]), 
+                   .I3(R[7]), 
+                   .O(XLXN_80));
+   OR4 XLXI_31 (.I0(XLXN_80), 
+                .I1(XLXN_79), 
+                .I2(XLXN_78), 
+                .I3(XLXN_77), 
+                .O(XLXN_88));
+   AND2 XLXI_33 (.I0(XLXN_88), 
+                 .I1(CARRY_DUMMY), 
+                 .O(OVFL));
+endmodule

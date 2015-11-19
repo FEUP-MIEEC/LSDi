@@ -1,0 +1,225 @@
+Release 10.1 Map K.31 (nt64)
+Xilinx Mapping Report File for Design 'lsdi_lab3'
+
+Design Information
+------------------
+Command Line   : map -ise F:/LSDI/1MIEEC01/3/LSDI2015_lab3/LSDI2015_lab3.ise
+-intstyle ise -p xc3s200-ft256-5 -cm area -pr off -k 4 -c 100 -o
+lsdi_lab3_map.ncd lsdi_lab3.ngd lsdi_lab3.pcf 
+Target Device  : xc3s200
+Target Package : ft256
+Target Speed   : -5
+Mapper Version : spartan3 -- $Revision: 1.46 $
+Mapped Date    : Thu Nov 19 17:14:48 2015
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:            76 out of   3,840    1%
+  Number of 4 input LUTs:               117 out of   3,840    3%
+Logic Distribution:
+  Number of occupied Slices:             96 out of   1,920    5%
+    Number of Slices containing only related logic:      96 out of      96 100%
+    Number of Slices containing unrelated logic:          0 out of      96   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         153 out of   3,840    3%
+    Number used as logic:               113
+    Number used as a route-thru:         36
+    Number used as Shift registers:       4
+  Number of bonded IOBs:                 33 out of     173   19%
+  Number of BUFGMUXs:                     1 out of       8   12%
+
+  Number of RPM macros:            1
+Peak Memory Usage:  226 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Control Set Information
+Section 14 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   1 block(s) removed
+   2 block(s) optimized away
+   1 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "datapath_1/lsdalu_1/detFlags/XLXI_3/dummy" is sourceless and has
+been removed.
+Unused block "datapath_1/lsdalu_1/detFlags/XLXI_3/XST_GND" (ZERO) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |             | Strength | Rate |              |          | Delay    |
++----------------------------------------------------------------------------------------------------------------------------------------+
+| an0                                | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| an1                                | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| an2                                | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| an3                                | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| btn0                               | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
+| btn1                               | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
+| btn2                               | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
+| btn3                               | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
+| clock50MHz                         | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
+| dp                                 | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| ld0                                | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| ld1                                | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| ld2                                | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| ld3                                | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| ld4                                | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| ld5                                | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| ld6                                | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| ld7                                | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| sega                               | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| segb                               | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| segc                               | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| segd                               | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| sege                               | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| segf                               | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| segg                               | IOB              | OUTPUT    | LVCMOS25    | 12       | SLOW |              |          |          |
+| sw0                                | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
+| sw1                                | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
+| sw2                                | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
+| sw3                                | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
+| sw4                                | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
+| sw5                                | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
+| sw6                                | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
+| sw7                                | IOB              | INPUT     | LVCMOS25    |          |      |              |          |          |
++----------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+datapath_1_lsdalu_1_detFlags_XLXI_3_0   
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 14 - Utilization by Hierarchy
+-------------------------------------
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module              | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                        |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| lsdi_lab3/          |           | 31/140        | 0/76          | 37/153        | 0/4           | 0/0       | 0/0       | 1/1   | 0/0   | lsdi_lab3                                     |
+| +autorepeat_1       |           | 4/4           | 4/4           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | lsdi_lab3/autorepeat_1                        |
+| +datapath_1         |           | 11/42         | 12/12         | 0/56          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | lsdi_lab3/datapath_1                          |
+| ++lsdalu_1          |           | 0/31          | 0/0           | 0/56          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | lsdi_lab3/datapath_1/lsdalu_1                 |
+| +++alu_             |           | 27/27         | 0/0           | 50/50         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | lsdi_lab3/datapath_1/lsdalu_1/alu_            |
+| +++detFlags         |           | 2/4           | 0/0           | 3/6           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | lsdi_lab3/datapath_1/lsdalu_1/detFlags        |
+| ++++XLXI_3          |           | 2/2           | 0/0           | 3/3           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | lsdi_lab3/datapath_1/lsdalu_1/detFlags/XLXI_3 |
+| +debounce_1         |           | 30/30         | 39/39         | 15/15         | 4/4           | 0/0       | 0/0       | 0/0   | 0/0   | lsdi_lab3/debounce_1                          |
+| +dip7seg            |           | 11/11         | 2/2           | 19/19         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | lsdi_lab3/dip7seg                             |
+| +disp7seg_clockgen_ |           | 22/22         | 19/19         | 24/24         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | lsdi_lab3/disp7seg_clockgen_1                 |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

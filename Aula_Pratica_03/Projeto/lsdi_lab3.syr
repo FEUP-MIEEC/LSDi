@@ -1,0 +1,693 @@
+Release 10.1 - xst K.31 (nt64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to F:/LSDI/1MIEEC01/3/LSDI2015_lab3/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.29 secs
+ 
+--> Parameter xsthdpdir set to F:/LSDI/1MIEEC01/3/LSDI2015_lab3/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.29 secs
+ 
+--> Reading design: lsdi_lab3.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "lsdi_lab3.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "lsdi_lab3"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : lsdi_lab3
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : lsdi_lab3.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "detFlags.vf" in library work
+Module <NOR8_MXILINX_detFlags> compiled
+Compiling verilog file "alu.v" in library work
+Module <detFlags> compiled
+Compiling verilog file "lsdalu.v" in library work
+Module <alu> compiled
+Compiling verilog file "disp7seg_clockgen.v" in library work
+Module <lsdalu> compiled
+Compiling verilog file "disp7seg.v" in library work
+Module <disp7seg_clockgen> compiled
+Compiling verilog file "debounce.v" in library work
+Module <disp7seg> compiled
+Compiling verilog file "datapath.v" in library work
+Module <debounce> compiled
+Compiling verilog file "autorepeat.v" in library work
+Module <datapath> compiled
+Compiling verilog file "lsdi_lab3.v" in library work
+Module <autorepeat> compiled
+Module <lsdi_lab3> compiled
+No errors in compilation
+Analysis of file <"lsdi_lab3.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <lsdi_lab3> in library <work>.
+
+Analyzing hierarchy for module <debounce> in library <work> with parameters.
+	TIME_BASE = "00000000000001111010000100011111"
+
+Analyzing hierarchy for module <autorepeat> in library <work> with parameters.
+	REPEAT_TIME = "00000000000000000000000000111100"
+	START_TIME = "00000000000000000000000010110100"
+
+Analyzing hierarchy for module <datapath> in library <work>.
+
+Analyzing hierarchy for module <disp7seg> in library <work>.
+
+Analyzing hierarchy for module <disp7seg_clockgen> in library <work>.
+
+Analyzing hierarchy for module <lsdalu> in library <work>.
+
+Analyzing hierarchy for module <alu> in library <work>.
+
+Analyzing hierarchy for module <detFlags> in library <work>.
+
+Analyzing hierarchy for module <NOR8_MXILINX_detFlags> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <lsdi_lab3>.
+WARNING:Xst:852 - "lsdi_lab3.v" line 144: Unconnected input port 'mode' of instance 'dip7seg' is tied to GND.
+Module <lsdi_lab3> is correct for synthesis.
+ 
+Analyzing module <debounce> in library <work>.
+	TIME_BASE = 32'sb00000000000001111010000100011111
+Module <debounce> is correct for synthesis.
+ 
+Analyzing module <autorepeat> in library <work>.
+	REPEAT_TIME = 32'sb00000000000000000000000000111100
+	START_TIME = 32'sb00000000000000000000000010110100
+Module <autorepeat> is correct for synthesis.
+ 
+Analyzing module <datapath> in library <work>.
+Module <datapath> is correct for synthesis.
+ 
+Analyzing module <lsdalu> in library <work>.
+Module <lsdalu> is correct for synthesis.
+ 
+Analyzing module <alu> in library <work>.
+Module <alu> is correct for synthesis.
+ 
+Analyzing module <detFlags> in library <work>.
+Module <detFlags> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_3_0" for instance <XLXI_3> in unit <detFlags>.
+Analyzing module <NOR8_MXILINX_detFlags> in library <work>.
+Module <NOR8_MXILINX_detFlags> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_29> in unit <NOR8_MXILINX_detFlags>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_138> in unit <NOR8_MXILINX_detFlags>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_144> in unit <NOR8_MXILINX_detFlags>.
+Analyzing module <disp7seg> in library <work>.
+WARNING:Xst:905 - "disp7seg.v" line 45: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <mode>, <en_disp>
+Module <disp7seg> is correct for synthesis.
+ 
+Analyzing module <disp7seg_clockgen> in library <work>.
+Module <disp7seg_clockgen> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <debounce>.
+    Related source file is "debounce.v".
+WARNING:Xst:646 - Signal <key3sr<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <key2sr<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <key1sr<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <key0sr<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 19-bit up counter for signal <clkdiv>.
+    Found 12-bit register for signal <key0sr>.
+    Found 12-bit register for signal <key1sr>.
+    Found 12-bit register for signal <key2sr>.
+    Found 12-bit register for signal <key3sr>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  48 D-type flip-flop(s).
+Unit <debounce> synthesized.
+
+
+Synthesizing Unit <autorepeat>.
+    Related source file is "autorepeat.v".
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 69 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <state>.
+    Found 1-bit register for signal <keyout>.
+    Found 1-bit register for signal <keypressed>.
+    Found 1-bit register for signal <resettimer>.
+    Found 3-bit register for signal <state>.
+    Found 8-bit up counter for signal <timer>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   6 D-type flip-flop(s).
+Unit <autorepeat> synthesized.
+
+
+Synthesizing Unit <disp7seg>.
+    Related source file is "disp7seg.v".
+    Found finite state machine <FSM_0> for signal <en_disp>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 4                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clockscan (rising_edge)                        |
+    | Clock enable       | clkenable (positive)                           |
+    | Reset              | areset (positive)                              |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0111                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16x7-bit ROM for signal <segments>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 ROM(s).
+Unit <disp7seg> synthesized.
+
+
+Synthesizing Unit <disp7seg_clockgen>.
+    Related source file is "disp7seg_clockgen.v".
+    Found 1-bit register for signal <clocken>.
+    Found 18-bit up counter for signal <clkdiv>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <disp7seg_clockgen> synthesized.
+
+
+Synthesizing Unit <alu>.
+    Related source file is "alu.v".
+    Found 8-bit 8-to-1 multiplexer for signal <R>.
+    Found 8-bit adder carry out for signal <AUX_4$addsub0000>.
+    Found 8-bit xor2 for signal <ROPR3>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   8 Multiplexer(s).
+Unit <alu> synthesized.
+
+
+Synthesizing Unit <NOR8_MXILINX_detFlags>.
+    Related source file is "detFlags.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <NOR8_MXILINX_detFlags> synthesized.
+
+
+Synthesizing Unit <detFlags>.
+    Related source file is "detFlags.vf".
+Unit <detFlags> synthesized.
+
+
+Synthesizing Unit <lsdalu>.
+    Related source file is "lsdalu.v".
+Unit <lsdalu> synthesized.
+
+
+Synthesizing Unit <datapath>.
+    Related source file is "datapath.v".
+    Found 8-bit register for signal <A>.
+    Found 4-bit register for signal <FLAGS>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <datapath> synthesized.
+
+
+Synthesizing Unit <lsdi_lab3>.
+    Related source file is "lsdi_lab3.v".
+WARNING:Xst:653 - Signal <reset> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <lsdi_lab3> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 8-bit adder carry out                                 : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 2
+ 18-bit up counter                                     : 1
+ 19-bit up counter                                     : 1
+# Registers                                            : 9
+ 1-bit register                                        : 2
+ 12-bit register                                       : 4
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 1
+# Multiplexers                                         : 1
+ 8-bit 8-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <dip7seg/en_disp/FSM> on signal <en_disp[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0111  | 00
+ 1011  | 01
+ 1101  | 11
+ 1110  | 10
+-------------------
+Loading device for application Rf_Device from file '3s200.nph' in environment C:\Xilinx\10.1\ISE.
+WARNING:Xst:2677 - Node <key1sr_0> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key1sr_1> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key1sr_2> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key1sr_3> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key1sr_4> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key1sr_5> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key0sr_0> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key0sr_1> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key0sr_2> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key0sr_3> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key0sr_4> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key0sr_5> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key2sr_0> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key2sr_1> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key2sr_2> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key2sr_3> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key2sr_4> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key2sr_5> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key3sr_0> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key3sr_1> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key3sr_2> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key3sr_3> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key3sr_4> of sequential type is unconnected in block <debounce>.
+WARNING:Xst:2677 - Node <key3sr_5> of sequential type is unconnected in block <debounce>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Adders/Subtractors                                   : 2
+ 8-bit adder carry out                                 : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 2
+ 18-bit up counter                                     : 1
+ 19-bit up counter                                     : 1
+# Registers                                            : 43
+ Flip-Flops                                            : 43
+# Multiplexers                                         : 1
+ 8-bit 8-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <lsdi_lab3> ...
+
+Optimizing unit <debounce> ...
+
+Optimizing unit <alu> ...
+
+Optimizing unit <NOR8_MXILINX_detFlags> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block lsdi_lab3, actual ratio is 5.
+WARNING:Xst:387 - The KEEP property attached to the net <datapath_1/lsdalu_1/detFlags/XLXI_3/O> may hinder timing optimization.
+   You may achieve better results by removing this property
+WARNING:Xst:387 - The KEEP property attached to the net <datapath_1/lsdalu_1/detFlags/XLXI_3/S0> may hinder timing optimization.
+   You may achieve better results by removing this property
+
+Final Macro Processing ...
+
+Processing Unit <lsdi_lab3> :
+	Found 2-bit shift register for signal <debounce_1/key3sr_9>.
+	Found 2-bit shift register for signal <debounce_1/key2sr_9>.
+	Found 2-bit shift register for signal <debounce_1/key0sr_9>.
+	Found 2-bit shift register for signal <debounce_1/key1sr_9>.
+Unit <lsdi_lab3> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 72
+ Flip-Flops                                            : 72
+# Shift Registers                                      : 4
+ 2-bit shift register                                  : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : lsdi_lab3.ngr
+Top Level Output File Name         : lsdi_lab3
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 33
+
+Cell Usage :
+# BELS                             : 299
+#      AND2                        : 2
+#      AND3B2                      : 2
+#      AND4B1                      : 1
+#      AND4B2                      : 2
+#      AND4B3                      : 1
+#      BUF                         : 1
+#      GND                         : 2
+#      INV                         : 3
+#      LUT1                        : 35
+#      LUT2                        : 42
+#      LUT3                        : 25
+#      LUT4                        : 37
+#      MUXCY                       : 61
+#      MUXF5                       : 21
+#      MUXF6                       : 8
+#      OR2                         : 1
+#      OR4                         : 3
+#      VCC                         : 1
+#      XORCY                       : 51
+# FlipFlops/Latches                : 76
+#      FD                          : 2
+#      FDC                         : 19
+#      FDCE                        : 2
+#      FDE                         : 32
+#      FDR                         : 19
+#      FDRS                        : 1
+#      FDS                         : 1
+# Shift Registers                  : 4
+#      SRL16E                      : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 32
+#      IBUF                        : 12
+#      OBUF                        : 20
+# Logical                          : 1
+#      NOR2                        : 1
+# Others                           : 3
+#      FMAP                        : 3
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                       86  out of   1920     4%  
+ Number of Slice Flip Flops:             76  out of   3840     1%  
+ Number of 4 input LUTs:                146  out of   3840     3%  
+    Number used as logic:               142
+    Number used as Shift registers:       4
+ Number of IOs:                          33
+ Number of bonded IOBs:                  33  out of    173    19%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock50MHz                         | BUFGP                  | 80    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+-----------------------------------+-------+
+Control Signal                     | Buffer(FF name)                   | Load  |
+-----------------------------------+-----------------------------------+-------+
+ld4_OBUF(XST_GND:G)                | NONE(disp7seg_clockgen_1/clkdiv_2)| 21    |
+-----------------------------------+-----------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 10.072ns (Maximum Frequency: 99.284MHz)
+   Minimum input arrival time before clock: 10.233ns
+   Maximum output required time after clock: 9.978ns
+   Maximum combinational path delay: 9.800ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock50MHz'
+  Clock period: 10.072ns (frequency: 99.284MHz)
+  Total number of paths / destination ports: 2852 / 136
+-------------------------------------------------------------------------
+Delay:               10.072ns (Levels of Logic = 14)
+  Source:            datapath_1/A_1 (FF)
+  Destination:       datapath_1/FLAGS_3 (FF)
+  Source Clock:      clock50MHz rising
+  Destination Clock: clock50MHz rising
+
+  Data Path: datapath_1/A_1 to datapath_1/FLAGS_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.626   1.076  datapath_1/A_1 (datapath_1/A_1)
+     LUT2:I1->O            1   0.479   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_lut<1> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_lut<1>)
+     MUXCY:S->O            1   0.435   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<1> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<2> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<3> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<4> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<5> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<6> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<6>)
+     XORCY:CI->O           1   0.786   0.740  datapath_1/lsdalu_1/alu_/Msub__AUX_3_xor<7> (datapath_1/lsdalu_1/alu_/ROPR1<7>)
+     LUT3:I2->O            1   0.479   0.000  datapath_1/lsdalu_1/alu_/Mmux_R_67 (datapath_1/lsdalu_1/alu_/Mmux_R_67)
+     MUXF5:I0->O           1   0.314   0.000  datapath_1/lsdalu_1/alu_/Mmux_R_4_f5_6 (datapath_1/lsdalu_1/alu_/Mmux_R_4_f57)
+     MUXF6:I0->O           7   0.298   0.906  datapath_1/lsdalu_1/alu_/Mmux_R_2_f6_6 (datapath_1/new_A<7>)
+     AND4B3:I3->O          1   0.479   0.681  datapath_1/lsdalu_1/detFlags/XLXI_28 (datapath_1/lsdalu_1/detFlags/XLXN_80)
+     OR4:I0->O             1   0.479   0.681  datapath_1/lsdalu_1/detFlags/XLXI_31 (datapath_1/lsdalu_1/detFlags/XLXN_88)
+     AND2:I0->O            1   0.479   0.681  datapath_1/lsdalu_1/detFlags/XLXI_33 (datapath_1/new_FLAGS<3>)
+     FDE:D                     0.176          datapath_1/FLAGS_3
+    ----------------------------------------
+    Total                     10.072ns (5.307ns logic, 4.765ns route)
+                                       (52.7% logic, 47.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock50MHz'
+  Total number of paths / destination ports: 341 / 16
+-------------------------------------------------------------------------
+Offset:              10.233ns (Levels of Logic = 15)
+  Source:            sw1 (PAD)
+  Destination:       datapath_1/FLAGS_3 (FF)
+  Destination Clock: clock50MHz rising
+
+  Data Path: sw1 to datapath_1/FLAGS_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.715   1.148  sw1_IBUF (sw1_IBUF)
+     LUT2:I0->O            1   0.479   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_lut<1> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_lut<1>)
+     MUXCY:S->O            1   0.435   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<1> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<2> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<3> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<4> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<5> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<6> (datapath_1/lsdalu_1/alu_/Msub__AUX_3_cy<6>)
+     XORCY:CI->O           1   0.786   0.740  datapath_1/lsdalu_1/alu_/Msub__AUX_3_xor<7> (datapath_1/lsdalu_1/alu_/ROPR1<7>)
+     LUT3:I2->O            1   0.479   0.000  datapath_1/lsdalu_1/alu_/Mmux_R_67 (datapath_1/lsdalu_1/alu_/Mmux_R_67)
+     MUXF5:I0->O           1   0.314   0.000  datapath_1/lsdalu_1/alu_/Mmux_R_4_f5_6 (datapath_1/lsdalu_1/alu_/Mmux_R_4_f57)
+     MUXF6:I0->O           7   0.298   0.906  datapath_1/lsdalu_1/alu_/Mmux_R_2_f6_6 (datapath_1/new_A<7>)
+     AND4B3:I3->O          1   0.479   0.681  datapath_1/lsdalu_1/detFlags/XLXI_28 (datapath_1/lsdalu_1/detFlags/XLXN_80)
+     OR4:I0->O             1   0.479   0.681  datapath_1/lsdalu_1/detFlags/XLXI_31 (datapath_1/lsdalu_1/detFlags/XLXN_88)
+     AND2:I0->O            1   0.479   0.681  datapath_1/lsdalu_1/detFlags/XLXI_33 (datapath_1/new_FLAGS<3>)
+     FDE:D                     0.176          datapath_1/FLAGS_3
+    ----------------------------------------
+    Total                     10.233ns (5.397ns logic, 4.836ns route)
+                                       (52.7% logic, 47.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock50MHz'
+  Total number of paths / destination ports: 152 / 15
+-------------------------------------------------------------------------
+Offset:              9.978ns (Levels of Logic = 4)
+  Source:            dip7seg/en_disp_FSM_FFd2 (FF)
+  Destination:       sega (PAD)
+  Source Clock:      clock50MHz rising
+
+  Data Path: dip7seg/en_disp_FSM_FFd2 to sega
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            13   0.626   1.290  dip7seg/en_disp_FSM_FFd2 (dip7seg/en_disp_FSM_FFd2)
+     LUT3:I0->O            1   0.479   0.000  dip7seg/out_display<3>_F (N52)
+     MUXF5:I0->O           7   0.314   1.201  dip7seg/out_display<3> (dip7seg/out_display<3>)
+     LUT4:I0->O            1   0.479   0.681  dip7seg/seg_g1 (segg_OBUF)
+     OBUF:I->O                 4.909          segg_OBUF (segg)
+    ----------------------------------------
+    Total                      9.978ns (6.807ns logic, 3.171ns route)
+                                       (68.2% logic, 31.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 56 / 7
+-------------------------------------------------------------------------
+Delay:               9.800ns (Levels of Logic = 5)
+  Source:            sw1 (PAD)
+  Destination:       sega (PAD)
+
+  Data Path: sw1 to sega
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.715   1.023  sw1_IBUF (sw1_IBUF)
+     LUT3:I1->O            1   0.479   0.000  dip7seg/out_display<1>_G (N57)
+     MUXF5:I1->O           7   0.314   1.201  dip7seg/out_display<1> (dip7seg/out_display<1>)
+     LUT4:I0->O            1   0.479   0.681  dip7seg/seg_c1 (segc_OBUF)
+     OBUF:I->O                 4.909          segc_OBUF (segc)
+    ----------------------------------------
+    Total                      9.800ns (6.896ns logic, 2.904ns route)
+                                       (70.4% logic, 29.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.28 secs
+ 
+--> 
+
+Total memory usage is 243376 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

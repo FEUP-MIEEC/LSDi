@@ -1,0 +1,83 @@
+//! **************************************************************************
+// Written by: Map K.31 on Thu Nov 19 17:14:51 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "sw4" LOCATE = SITE "J14" LEVEL 1;
+COMP "sw5" LOCATE = SITE "J13" LEVEL 1;
+COMP "sw6" LOCATE = SITE "K14" LEVEL 1;
+COMP "sw7" LOCATE = SITE "K13" LEVEL 1;
+COMP "an0" LOCATE = SITE "D14" LEVEL 1;
+COMP "an1" LOCATE = SITE "G14" LEVEL 1;
+COMP "an2" LOCATE = SITE "F14" LEVEL 1;
+COMP "an3" LOCATE = SITE "E13" LEVEL 1;
+COMP "ld0" LOCATE = SITE "K12" LEVEL 1;
+COMP "ld1" LOCATE = SITE "P14" LEVEL 1;
+COMP "ld2" LOCATE = SITE "L12" LEVEL 1;
+COMP "ld3" LOCATE = SITE "N14" LEVEL 1;
+COMP "ld4" LOCATE = SITE "P13" LEVEL 1;
+COMP "ld5" LOCATE = SITE "N12" LEVEL 1;
+COMP "ld6" LOCATE = SITE "P12" LEVEL 1;
+COMP "clock50MHz" LOCATE = SITE "T9" LEVEL 1;
+COMP "ld7" LOCATE = SITE "P11" LEVEL 1;
+NET "clock50MHz_BUFGP/IBUFG" BEL "clock50MHz_BUFGP/BUFG.GCLKMUX"
+        USELOCALCONNECT;
+COMP "btn0" LOCATE = SITE "M13" LEVEL 1;
+COMP "btn1" LOCATE = SITE "M14" LEVEL 1;
+COMP "btn2" LOCATE = SITE "L13" LEVEL 1;
+COMP "btn3" LOCATE = SITE "L14" LEVEL 1;
+COMP "dp" LOCATE = SITE "P16" LEVEL 1;
+COMP "sega" LOCATE = SITE "E14" LEVEL 1;
+COMP "segb" LOCATE = SITE "G13" LEVEL 1;
+COMP "segc" LOCATE = SITE "N15" LEVEL 1;
+COMP "segd" LOCATE = SITE "P15" LEVEL 1;
+COMP "sege" LOCATE = SITE "R16" LEVEL 1;
+COMP "segf" LOCATE = SITE "F13" LEVEL 1;
+COMP "segg" LOCATE = SITE "N16" LEVEL 1;
+COMP "sw0" LOCATE = SITE "F12" LEVEL 1;
+COMP "sw1" LOCATE = SITE "G12" LEVEL 1;
+COMP "sw2" LOCATE = SITE "H14" LEVEL 1;
+COMP "sw3" LOCATE = SITE "H13" LEVEL 1;
+TIMEGRP clock50MHz = BEL "autorepeat_1/keyout" BEL "autorepeat_1/state_1" BEL
+        "dip7seg/en_disp_FSM_FFd1" BEL "dip7seg/en_disp_FSM_FFd2" BEL
+        "disp7seg_clockgen_1/clocken" BEL "datapath_1/FLAGS_3" BEL
+        "datapath_1/FLAGS_2" BEL "datapath_1/FLAGS_1" BEL "datapath_1/FLAGS_0"
+        BEL "datapath_1/A_7" BEL "datapath_1/A_6" BEL "datapath_1/A_5" BEL
+        "datapath_1/A_4" BEL "datapath_1/A_3" BEL "datapath_1/A_2" BEL
+        "datapath_1/A_1" BEL "datapath_1/A_0" BEL
+        "disp7seg_clockgen_1/clkdiv_0" BEL "disp7seg_clockgen_1/clkdiv_1" BEL
+        "disp7seg_clockgen_1/clkdiv_2" BEL "disp7seg_clockgen_1/clkdiv_3" BEL
+        "disp7seg_clockgen_1/clkdiv_4" BEL "disp7seg_clockgen_1/clkdiv_5" BEL
+        "disp7seg_clockgen_1/clkdiv_6" BEL "disp7seg_clockgen_1/clkdiv_7" BEL
+        "disp7seg_clockgen_1/clkdiv_8" BEL "disp7seg_clockgen_1/clkdiv_9" BEL
+        "disp7seg_clockgen_1/clkdiv_10" BEL "disp7seg_clockgen_1/clkdiv_11"
+        BEL "disp7seg_clockgen_1/clkdiv_12" BEL
+        "disp7seg_clockgen_1/clkdiv_13" BEL "disp7seg_clockgen_1/clkdiv_14"
+        BEL "disp7seg_clockgen_1/clkdiv_15" BEL
+        "disp7seg_clockgen_1/clkdiv_16" BEL "disp7seg_clockgen_1/clkdiv_17"
+        BEL "debounce_1/clkdiv_18" BEL "debounce_1/clkdiv_17" BEL
+        "debounce_1/clkdiv_16" BEL "debounce_1/clkdiv_15" BEL
+        "debounce_1/clkdiv_14" BEL "debounce_1/clkdiv_13" BEL
+        "debounce_1/clkdiv_12" BEL "debounce_1/clkdiv_11" BEL
+        "debounce_1/clkdiv_10" BEL "debounce_1/clkdiv_9" BEL
+        "debounce_1/clkdiv_8" BEL "debounce_1/clkdiv_7" BEL
+        "debounce_1/clkdiv_6" BEL "debounce_1/clkdiv_5" BEL
+        "debounce_1/clkdiv_4" BEL "debounce_1/clkdiv_3" BEL
+        "debounce_1/clkdiv_2" BEL "debounce_1/clkdiv_1" BEL
+        "debounce_1/clkdiv_0" BEL "debounce_1/key3sr_11" BEL
+        "debounce_1/key3sr_8" BEL "debounce_1/key3sr_7" BEL
+        "debounce_1/key3sr_6" BEL "debounce_1/key2sr_11" BEL
+        "debounce_1/key2sr_8" BEL "debounce_1/key2sr_7" BEL
+        "debounce_1/key2sr_6" BEL "debounce_1/key0sr_11" BEL
+        "debounce_1/key0sr_8" BEL "debounce_1/key0sr_7" BEL
+        "debounce_1/key0sr_6" BEL "debounce_1/key1sr_11" BEL
+        "debounce_1/key1sr_8" BEL "debounce_1/key1sr_7" BEL
+        "debounce_1/key1sr_6" BEL "autorepeat_1/state_2" BEL
+        "autorepeat_1/state_0" BEL "debounce_1/Mshreg_key3sr_9" BEL
+        "debounce_1/key3sr_9" BEL "debounce_1/Mshreg_key2sr_9" BEL
+        "debounce_1/key2sr_9" BEL "debounce_1/Mshreg_key0sr_9" BEL
+        "debounce_1/key0sr_9" BEL "debounce_1/Mshreg_key1sr_9" BEL
+        "debounce_1/key1sr_9";
+TS_clock50MHz = PERIOD TIMEGRP "clock50MHz" 20 ns HIGH 50%;
+SCHEMATIC END;
+

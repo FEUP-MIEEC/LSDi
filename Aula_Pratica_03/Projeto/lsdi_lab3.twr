@@ -1,0 +1,74 @@
+--------------------------------------------------------------------------------
+Release 10.1 Trace  (nt64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\10.1\ISE\bin\nt64\unwrapped\trce.exe -ise
+F:/LSDI/1MIEEC01/3/LSDI2015_lab3/LSDI2015_lab3.ise -intstyle ise -e 3 -s 5 -xml
+lsdi_lab3 lsdi_lab3.ncd -o lsdi_lab3.twr lsdi_lab3.pcf -ucf
+s3board_toplevel.ucf
+
+Design file:              lsdi_lab3.ncd
+Physical constraint file: lsdi_lab3.pcf
+Device,package,speed:     xc3s200,ft256,-5 (PRODUCTION 1.39 2008-01-09)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_clock50MHz = PERIOD TIMEGRP "clock50MHz" 20 ns HIGH 50%;
+
+ 2623 paths analyzed, 199 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   7.439ns.
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clock50MHz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock50MHz     |    7.439|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0
+
+Constraints cover 2623 paths, 0 nets, and 447 connections
+
+Design statistics:
+   Minimum period:   7.439ns   (Maximum frequency: 134.427MHz)
+
+
+Analysis completed Thu Nov 19 17:15:03 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 148 MB
+
+
+
