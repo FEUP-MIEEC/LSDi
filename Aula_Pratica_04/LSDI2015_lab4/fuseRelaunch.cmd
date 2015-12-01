@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Goncalo/Documents/FEUP/LSDi/Aula_Pratica_04/LSDI2015_lab4/datapath_isim_beh.exe" -prj "C:/Users/Goncalo/Documents/FEUP/LSDi/Aula_Pratica_04/LSDI2015_lab4/datapath_beh.prj" "work.datapath" "work.glbl" 

@@ -1,0 +1,7 @@
+verilog work "reg8b.v"
+verilog work "reg4b.v"
+verilog work "mux81.v"
+verilog work "lsdalu.v"
+verilog work "dec24.v"
+verilog work "datapath.vf"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,16 @@
+[Inputs]
+=SEL[2:0]=
+=I0[7:0]=
+=I1[7:0]=
+=I2[7:0]=
+=I3[7:0]=
+=I4[7:0]=
+=I5[7:0]=
+=I6[7:0]=
+=I7[7:0]=
+[Outputs]
+=Y[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel mux81
+

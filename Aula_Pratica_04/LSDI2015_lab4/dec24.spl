@@ -1,0 +1,11 @@
+[Inputs]
+=CE[1:0]=
+[Outputs]
+Y3
+Y2
+Y1
+Y0
+[BiDir]
+[ATTRIBUTES]
+VeriModel dec24
+

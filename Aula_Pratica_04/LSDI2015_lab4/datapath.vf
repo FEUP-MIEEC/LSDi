@@ -1,0 +1,134 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : datapath.vf
+// /___/   /\     Timestamp : 12/01/2015 19:08:59
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3 -verilog C:/Users/Goncalo/Documents/FEUP/LSDi/Aula_Pratica_04/LSDI2015_lab4/datapath.vf -w C:/Users/Goncalo/Documents/FEUP/LSDi/Aula_Pratica_04/LSDI2015_lab4/datapath.sch
+//Design Name: datapath
+//Device: spartan3
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module datapath(CE, 
+                clock, 
+                OPR, 
+                reset, 
+                SEL, 
+                X, 
+                A, 
+                B, 
+                FLAGS);
+
+    input [1:0] CE;
+    input clock;
+    input [2:0] OPR;
+    input reset;
+    input [2:0] SEL;
+    input [7:0] X;
+   output [7:0] A;
+   output [7:0] B;
+   output [3:0] FLAGS;
+   
+   wire [7:0] I5;
+   wire [7:0] I6;
+   wire [7:0] I7;
+   wire [7:0] XLXN_6;
+   wire XLXN_94;
+   wire [7:0] XLXN_95;
+   wire [7:0] XLXN_98;
+   wire [7:0] XLXN_99;
+   wire XLXN_101;
+   wire XLXN_102;
+   wire XLXN_103;
+   wire XLXN_104;
+   wire [3:0] XLXN_106;
+   wire [7:0] A_DUMMY;
+   wire [7:0] B_DUMMY;
+   wire [3:0] FLAGS_DUMMY;
+   
+   assign A[7:0] = A_DUMMY[7:0];
+   assign B[7:0] = B_DUMMY[7:0];
+   assign FLAGS[3:0] = FLAGS_DUMMY[3:0];
+   GND  GND1_0 (.G(I5[1]));
+   GND  GND1_1 (.G(I5[2]));
+   GND  GND1_2 (.G(I5[3]));
+   GND  GND1_3 (.G(I5[4]));
+   GND  GND1_4 (.G(I5[5]));
+   GND  GND1_5 (.G(I5[6]));
+   GND  GND1_6 (.G(I5[7]));
+   VCC  VCC_0 (.P(I6[0]));
+   VCC  VCC_1 (.P(I6[1]));
+   VCC  VCC_2 (.P(I6[2]));
+   VCC  VCC_3 (.P(I6[3]));
+   lsdalu  XLXI_9 (.A(A_DUMMY[7:0]), 
+                  .B(B_DUMMY[7:0]), 
+                  .OPR(OPR[2:0]), 
+                  .FLAGS(XLXN_106[3:0]), 
+                  .R(XLXN_6[7:0]));
+   mux81  XLXI_20 (.I0(A_DUMMY[7:0]), 
+                  .I1(XLXN_99[7:0]), 
+                  .I2(XLXN_98[7:0]), 
+                  .I3(XLXN_95[7:0]), 
+                  .I4(X[7:0]), 
+                  .I5(I5[7:0]), 
+                  .I6(I6[7:0]), 
+                  .I7(I7[7:0]), 
+                  .SEL(SEL[2:0]), 
+                  .Y(B_DUMMY[7:0]));
+   dec24  XLXI_21 (.CE(CE[1:0]), 
+                  .Y0(XLXN_101), 
+                  .Y1(XLXN_102), 
+                  .Y2(XLXN_103), 
+                  .Y3(XLXN_104));
+   reg4b  XLXI_22 (.ck(clock), 
+                  .D(XLXN_106[3:0]), 
+                  .enable(XLXN_94), 
+                  .reset(reset), 
+                  .Q(FLAGS_DUMMY[3:0]));
+   reg8b  XLXI_23 (.ck(clock), 
+                  .D(XLXN_6[7:0]), 
+                  .enable(XLXN_101), 
+                  .reset(reset), 
+                  .Q(A_DUMMY[7:0]));
+   reg8b  XLXI_24 (.ck(clock), 
+                  .D(XLXN_6[7:0]), 
+                  .enable(XLXN_102), 
+                  .reset(reset), 
+                  .Q(XLXN_99[7:0]));
+   reg8b  XLXI_25 (.ck(clock), 
+                  .D(XLXN_6[7:0]), 
+                  .enable(XLXN_103), 
+                  .reset(reset), 
+                  .Q(XLXN_98[7:0]));
+   reg8b  XLXI_26 (.ck(clock), 
+                  .D(XLXN_6[7:0]), 
+                  .enable(XLXN_104), 
+                  .reset(reset), 
+                  .Q(XLXN_95[7:0]));
+   VCC  XLXI_29 (.P(I5[0]));
+   GND  XLXI_38_0 (.G(I7[1]));
+   GND  XLXI_38_1 (.G(I7[2]));
+   GND  XLXI_38_2 (.G(I7[3]));
+   GND  XLXI_38_3 (.G(I7[4]));
+   GND  XLXI_38_4 (.G(I7[5]));
+   GND  XLXI_38_5 (.G(I7[6]));
+   GND  XLXI_38_6 (.G(I7[7]));
+   GND  XLXI_42_0 (.G(I6[4]));
+   GND  XLXI_42_1 (.G(I6[5]));
+   GND  XLXI_42_2 (.G(I6[6]));
+   GND  XLXI_42_3 (.G(I6[7]));
+   BUF  XLXI_47 (.I(FLAGS_DUMMY[2]), 
+                .O(I7[0]));
+   VCC  XLXI_76 (.P(XLXN_94));
+endmodule
