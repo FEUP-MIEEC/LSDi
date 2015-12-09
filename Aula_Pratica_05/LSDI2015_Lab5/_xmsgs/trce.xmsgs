@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Timing" num="3326" delta="unknown" >Timing Constraint 
+&quot;<arg fmt="%s" index="1">TS_clock50MHz = PERIOD TIMEGRP &quot;clock50MHz&quot; 20 ns HIGH 50%;</arg>&quot;
+ fails the maximum period check for output clock &quot;<arg fmt="%s" index="2">dcmdiv2_1/CLK0_BUF</arg>&quot; from <arg fmt="%s" index="3">DCM</arg> block &quot;<arg fmt="%s" index="4">dcmdiv2_1/DCM_INST</arg>&quot; because the period constraint value (<arg fmt="%d" index="5">40000</arg> ps) exceeds the maximum internal period limit of <arg fmt="%d" index="6">27779</arg> ps.   Please reduce the period of the constraint to remove this timing failure.</msg>
+
+<msg type="info" file="Timing" num="2752" delta="unknown" >To get complete path coverage, use the unconstrained paths option. All paths that are not constrained will be reported in the unconstrained paths section(s) of the report.</msg>
+
+<msg type="info" file="Timing" num="3339" delta="unknown" >The clock-to-out numbers in this timing report are based on a 50 Ohm transmission line loading model.  For the details of this model, and for more information on accounting for different loading conditions, please see the device datasheet.</msg>
+
+</messages>
+
