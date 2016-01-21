@@ -305,7 +305,10 @@ err:    li  $v0, 4
 #	nenhum: após a operação, $a1 tem o endereço base do vetor 
 #               soma (o vetor 1 original é perdido)
 #---------------------------------------------------------------------
-
+#
+# 	Created on: 14/01/2016
+#      	Author: Daniel Silva
+#
 sumV:	# coloque o seu código a partir daqui...
 	add $t0, $a0, $zero
 	add $t1, $a1, $zero
@@ -333,7 +336,10 @@ sumFim:	jr  $ra    # para retornar ao programa que chamou esta rotina
 # Valor retornado
 #	$v0 - produto interno
 #---------------------------------------------------------------------
-
+#
+# 	Created on: 14/01/2016
+#      	Author: Daniel Silva
+#
 	
 prodInt:	# coloque o seu código a partir daqui...
 	add $t0, $a0, $zero
@@ -363,7 +369,10 @@ PIFim:	jr  $ra    # para retornar ao programa que chamou esta rotina
 # Valor retornado
 #	$v0 - valor do menor mínimo
 #---------------------------------------------------------------------
-
+#
+# 	Created on: 14/01/2016
+#      	Author: Daniel Silva
+#
 menMin:	# coloque o seu código a partir daqui...
 	add $t0, $a0, $zero
 	add $t1, $a1, $zero
@@ -398,7 +407,10 @@ up2min: addi $v0, $t4, 0
 # Valor retornado
 #	$v0 - número de elementos
 #---------------------------------------------------------------------
-
+#
+# 	Created on: 14/01/2016
+#      	Author: Daniel Silva
+#
 com:	# coloque o seu código a partir daqui...
 	add $t0, $a0, $zero
 	add $t1, $a1, $zero
