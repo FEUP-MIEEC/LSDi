@@ -353,6 +353,25 @@ PIC:	beq $t0, $zero, PIFim
 PIFim:	jr  $ra    # para retornar ao programa que chamou esta rotina
 
 
+
+min:	# coloque o seu código a partir daqui...
+	
+	lw $s1, 0($a1)
+	addi $v0, $s1, 0
+	addi $s3, $a1, 0
+	addi $s0, $zero, 0
+gomin:	lw $s1, 0($s3)
+	slt $s4, $s1, $v0
+	bne $s4, $zero, updmin
+conmin:	addi $s0, $s0, 1
+	addi $s3, $s3, 4
+	bne $s0, $a0, gomin
+	jr  $ra    # para retornar ao programa que chamou esta rotina
+	
+updmin: addi $v0, $s1, 0
+	j conmin
+	
+	
 #---------------------------------------------------------------------
 # menMin - determinação do menor dos mínimos dos vetores
 #
@@ -363,30 +382,46 @@ PIFim:	jr  $ra    # para retornar ao programa que chamou esta rotina
 # Valor retornado
 #	$v0 - valor do menor mínimo
 #---------------------------------------------------------------------
+menMin: add $t7, $ra, $zero
+	jal min
+	add $t2, $v0, $zero
+	add $t0, $a1, $zero
+	add $a1, $a2, $zero
+	jal min
+	add $a2, $a1, $zero
+	add $a1, $t0, $zero
+	add $t1, $v0, $zero
+	slt $t0, $t1, $t2
+	beq $t0, $zero, minfl
+	add $v0, $t1, $zero
+	j MinFim
+minfl:  add $v0, $t2, $zero
+MinFim:	jr  $t7  
 
-menMin:	# coloque o seu código a partir daqui...
+
+menMin2:	# coloque o seu código a partir daqui...
 	add $t0, $a0, $zero
 	add $t1, $a1, $zero
 	add $t2, $a2, $zero
 	add $v0, $t1, $zero
-MinC:	beq $t0, $zero, MinFim
+MinC2:	beq $t0, $zero, MinFim2
 	lw $t3, 0($t1)
 	lw $t4, 0($t2)
 	slt $t5, $t3, $v0
-	bne $t5, $zero, up1min
-co1min:	slt $t5, $t4, $v0
-	bne $t5, $zero, up2min
-co2min:	addi $t1, $t1, 4
+	bne $t5, $zero, up1min2
+co1min2:	slt $t5, $t4, $v0
+	bne $t5, $zero, up2min2
+co2min2:	addi $t1, $t1, 4
 	addi $t2, $t2, 4
 	addi $t0, $t0, -1
-	j MinC
+	j MinC2
 	
-MinFim:	jr  $ra    # para retornar ao programa que chamou esta rotina
+MinFim2:	jr  $ra    # para retornar ao programa que chamou esta rotina
 
-up1min: addi $v0, $t3, 0
-	j co1min
-up2min: addi $v0, $t4, 0
-	j co2min
+up1min2: addi $v0, $t3, 0
+	j co1min2
+up2min2: addi $v0, $t4, 0
+	j co2min2
 
 #---------------------------------------------------------------------
 # com - determinação do número de elementos comuns aos dois vetores
@@ -421,4 +456,3 @@ comFim:	jr  $ra    # para retornar ao programa que chamou esta rotina
 
 upd2c: addi $v0, $v0, 1
 	j cntCom
-
